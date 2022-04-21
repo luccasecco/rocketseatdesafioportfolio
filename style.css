@@ -1,0 +1,475 @@
+/* ============ RESET =============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/* ============ VARIABLES =============================== */
+
+:root {
+  /* COLORS */
+  --hue: 249;
+  /* HSL color mode */
+    --body-bg-color: #22212C;
+    --text-color: hsla(249, 15%, 56%, 1);
+    --bg-cards: hsla(244, 13%, 21%, 1);
+    --bg-techs: #CB92B1;
+    --img-border: hsla(120, 100%, 50%, 1);
+    --img-border-switch: rgb(69, 227, 206);
+    --tech-color: hsla(327, 35%, 68%, 1);
+    --tech-text:  hsla(0, 0%, 0%, 1);
+
+  font-size: 62.5%;
+  font-family:'Merriweather Sans', sans-serif;;
+}
+
+/* ============ BASE =============================== */
+
+body{
+  overflow-x: hidden;
+  background-color: var(--body-bg-color)
+}
+
+.container{
+  display: flex;
+  width: 100vw;
+  padding: 0 2%;
+}
+
+.title{
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.text{
+  color: var(--text-color);
+  font-weight: 300;
+}
+
+.column-two{
+  max-width: 100rem;
+  width: 100%;
+}
+/* ============ PROFILE =============================== */
+
+.profile{
+  text-align: center;
+  background-color: var(--bg-cards);
+  width: 34.8rem;
+  height: 29.2rem;
+  margin: 4rem 6rem 3rem 4rem;
+  
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.profile img{
+  width: 12.8rem;
+  height: 12.8rem;
+  border-radius: 6.4rem;
+  margin-top: 3.2rem;
+  border: .2rem solid var(--img-border);
+
+  
+  animation-name: switch-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes switch-animation {
+ 0% {border-color: --img-border;}
+ 50% {border-color: var(--img-border-switch);}
+ 100% {border-color: var(--img-border);}
+}
+
+.profile h2{
+  font-size: 2.3rem;
+  margin-top: 3rem;
+}
+
+.profile p{
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+/* ============ PROJECTS =============================== */
+.projects{
+  display: flex;
+  background-color: var(--bg-cards);
+  margin-top: 4rem;
+ 
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.project1{
+  display: flex;
+  width: 95.2rem;
+  height: 8.6rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.project1 h2{
+  font-size: 2rem;
+}
+
+.project1 a{
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.project1 a:hover{
+  color: hsla(327, 35%, 68%, 1)
+}
+
+.project2{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.1rem;
+}
+
+.box1, .box2{
+  width: 45.1rem;
+  height: 18.6rem;
+  background-color: var(--bg-cards);
+
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.box1 .my-onix,
+.box2 .my-onix{
+  display: flex;
+  margin: 3rem;
+  align-items: center;
+}
+
+.box1 .my-onix p,
+.box2 .my-onix p{
+  margin-left: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.content{
+  margin: 2rem 3rem 1rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.icons{
+  display: flex;
+  margin: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icons .left{
+  display: flex;
+  align-items: center;
+}
+
+.icons .left img:nth-of-type(2){
+  margin-left: 1.6rem;
+}
+
+.icons .left p{
+  margin-left: .5rem;
+}
+
+.right{
+  display: flex;
+}
+
+.ball{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: .5rem;
+
+  border-radius: 50%;
+  background-color: 
+  hsla(55, 70%, 69%, 1);
+  border: 2px solid hsla(249, 15%, 56%, 1);
+}
+
+/* ============ LINKS =============================== */
+.links{
+  background-color: var(--bg-cards);
+  width: 34.8rem;
+  height: 34.8rem;
+  margin-left: 4rem;
+  padding: 3rem 4rem;
+
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.link-wrapper{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;;
+}
+
+.link-wrapper p, .link-wrapper a{
+  margin-left: 2rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* ============ POSTS =============================== */
+.recent-posts{
+  background-color: var(--bg-cards);
+  
+  height: 8.6rem;
+  margin-top: 3rem;
+  padding: 3rem;
+
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.recent-posts h2{
+  font-size: 2rem;
+}
+
+.post{
+  
+  height: 20.1rem;
+  display: flex;
+  padding: 3.1rem 2rem 4.2rem 3rem;
+  background-color: var(--bg-cards);
+  margin-top: 3rem;
+ 
+
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.post img{
+  width: 12.8rem;
+  height: 12.8rem;
+  border-radius: 50%;
+}
+
+.text-wrapper{
+  margin-left: 2rem;
+}
+
+.text-wrapper h2{
+  font-size: 1.8rem;
+}
+
+.text-wrapper p:nth-of-type(1){
+  margin-top: .8rem;
+  font-size: 1.4rem;
+}
+
+.text-wrapper p:nth-of-type(2){
+  margin-top: 2.8rem;
+  font-size: 1.6rem;
+}
+
+.hashtag{
+  margin-top: 1.1rem;
+}
+
+.hashtag span{
+  font-size: 1.4rem;
+}
+
+.hashtag span:not(:first-child){
+  margin-left: 1rem;
+}
+
+/* ============ TECHNOLOGIES =============================== */
+.technologies{
+  width: 34.8rem;
+  height: 20.8rem;
+  background-color: var(--bg-cards);
+  margin: 3rem 4rem;
+  padding-left: 2rem;
+  padding-top:  3rem;
+ 
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.technologies h2{
+  font-size: 2rem;
+}
+
+.tech-single-box{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech-single{
+  width: 8.6rem;
+  height: 2.4rem;
+  background: var(--tech-color);
+  text-align: center;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  border-radius: 3rem;
+}
+
+.tech-single p{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--tech-text);
+}
+
+/* ============ EXPERIENCES =============================== */
+.experiences{
+  width: 34.8rem;
+  height: 34.9rem;
+  margin: 3rem 4rem;
+  background: var(--bg-cards);
+  padding-top: 3rem;
+  padding-left: 2rem;
+
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.experiences h2{
+  font-size: 2rem;
+}
+
+.experiences-list{
+  margin: 2rem 13.3rem 3rem 4rem;
+}
+
+.experiences-list ul:not(last-child){
+  margin-bottom: 1.5rem;
+}
+
+.experiences-list li{
+  font-size: 1.4rem;
+  font-weight: 700
+}
+
+.experiences-list ul p:nth-of-type(1){
+  font-size: 1.2rem;
+  font-weight: 300
+}
+
+.experiences-list ul p:nth-of-type(2){
+  font-size: 1.2rem;
+  font-weight: 400
+}
+
+/* ============ EDUCATION =============================== */
+.education{
+  width: 34.8rem;
+  height: 34.9rem;
+  margin: 3rem 4rem;
+  background: var(--bg-cards);
+  padding-top: 3rem;
+  padding-left: 2rem;
+
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.education h2{
+  font-size: 2rem;
+}
+
+.education-list{
+  margin: 2rem 13.3rem 3rem 4rem;
+}
+
+.education-list ul:not(last-child){
+  margin-bottom: 1.5rem;
+}
+
+.education-list li{
+  font-size: 1.4rem;
+  font-weight: 700
+}
+
+.education-list ul p:nth-of-type(1){
+  font-size: 1.2rem;
+  font-weight: 300
+}
+
+.education-list ul p:nth-of-type(2){
+  font-size: 1.2rem;
+  font-weight: 400
+}
+
+/* ============ MEDIA QUERIES =============================== */
+@media screen and (max-width: 1000px){
+  .container{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .projects{
+    margin-right: 2%;
+  }
+
+  .project1{
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .project1 h2{
+    margin-bottom: 1rem;
+  }
+
+  .project2{
+    display: block;
+    margin-right: 2%;
+  }
+
+  .box1{
+    width: 100%;
+  }
+
+  .box2{
+    width: 100%;
+  }
+
+  .box1 .my-onix,
+  .box2 .my-onix{
+    padding: 2rem 0;
+  }
+
+  .recent-posts{
+    margin-right: 2%;
+  }
+
+  .recent-posts h2{
+    text-align: center;
+  }
+
+  .post{
+    margin-right: 2%;
+  }
+
+  .experiences h2{
+    text-align: center;
+  }
+
+  .education h2{
+    text-align: center;
+  }
+}
